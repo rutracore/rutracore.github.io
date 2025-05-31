@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #0a0f1f;
+  --primary: #00b894;
+  --highlight: #14ffec;
+  --text: #e0f8f1;
+  --text-muted: #b2bec3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+header {
+  background: #0d1326;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary);
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--highlight);
+}
+
+#hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #0a0f1f, #0f1729);
+  border-bottom: 1px solid var(--primary);
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  color: var(--highlight);
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--highlight);
+  padding-left: 1rem;
+}
+
+section p {
+  color: var(--text);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0d1326;
+  color: var(--text-muted);
+  border-top: 1px solid var(--primary);
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #hero h2 {
+    font-size: 2rem;
+  }
+}
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projeto-card {
+  background-color: #111827;
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+.projeto-card h3 {
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #0a0f1f;
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  background-color: #1c2333;
+  color: var(--text);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: var(--highlight);
+  color: #0a0f1f;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00ffd5;
+}
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.social-icons {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: var(--highlight);
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-header a {
+  color: var(--highlight);
+  font-size: 1.2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-header a:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+.tooltip {
+  position: relative;
+  cursor: help;
+  color: var(--highlight);
+  border-bottom: 1px dashed var(--highlight);
+  font-weight: 500;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 260px;
+  background-color: #1c2333;
+  color: var(--text);
+  text-align: left;
+  border-radius: 6px;
+  padding: 0.6rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.4s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #1c2333;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  color: var(--text);
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+.modal-content h3 {
+  color: var(--highlight);
+  margin-top: 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  color: var(--highlight);
+  cursor: pointer;
+}
+
+button.modal-trigger {
+  background: none;
+  border: none;
+  color: var(--highlight);
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: underline;
+  padding: 0;
+}

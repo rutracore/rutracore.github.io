@@ -1,1 +1,154 @@
-Hello World
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rutracore</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Rutracore</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="social-header">
+            <a href="https://github.com/rutracore" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/artursntrindade/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="http://lattes.cnpq.br/1483108785944130" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h2>Medicina Veterinária <i class="fas fa-handshake"></i> Computação</h2>
+            <p>Desenvolvendo e aplicando tecnologias computacionais afim de <br /><b>revolucionar e convolucionar a
+                    Medicina Veterinária</b></p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Sou Médico Veterinário, Cientista da computação, professor universitário e pesquisador. Atuando na
+                criação de soluções tecnológicas e automatizações aplicadas à <span class="tooltip">Saúde Única
+                    <span class="tooltip-text">
+                        Estratégia que reconhece que a saúde humana, a saúde animal e o meio ambiente estão
+                        interligados.
+                    </span>
+                </span></p>
+        </section>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="projetos-container">
+                <div class="projeto-card">
+                    <h3>TFinder</h3>
+                    <p>
+                        IA que automatiza, auxilia e acelera a identificação e o diagnóstico dos agentes causadores da
+                        <b>Tristeza Parasitária Bovina</b>:
+                        <button class="modal-trigger" data-modal="anaplasma">Anaplasma marginale</button>,
+                        <button class="modal-trigger" data-modal="bovis">Babesia bovis</button>,
+                        <button class="modal-trigger" data-modal="bigemina">Babesia bigemina</button>
+                    </p>
+                    <span class="badge">Python</span>
+                    <span class="badge">OpenCV</span>
+                    <span class="badge">Darknet Framework</span>
+                    <span class="badge">YOLOv4</span>
+                </div>
+
+                <div class="projeto-card">
+                    <h3>Helmegg - Em desenvolvimento</h3>
+                    <p>IA aplicada à
+                        <span class="tooltip"><b>helmintologia</b>
+                            <span class="tooltip-text">Área da parasitologia que estuda vermes parasitas (helmintos) de
+                                interesse veterinário.</span>
+                        </span>, com intuito de automatizar a quantificação de
+                        <span class="tooltip"><b>ovos por grama de fezes</b>
+                            <span class="tooltip-text">Exame parasitológico OPG (Ovos Por Grama) avalia a carga
+                                parasitária por contagem de ovos.</span>
+                        </span> de bovinos infectados
+                    </p>
+
+
+                    <span class="badge">Python</span>
+                    <span class="badge">OpenCV</span>
+                    <span class="badge">Darknet Framework</span>
+                    <span class="badge">YOLOv4</span>
+                </div>
+
+                <div class="projeto-card">
+                    <h3>Tryptron - Em desenvolvimento</h3>
+                    <p>IA aplicada à busca e quantificação de
+                        <span class="tooltip"><i>Trypanosoma vivax</i>
+                            <span class="tooltip-text">Protozoário flagelado que infecta o sangue de ruminantes,
+                                causando tripanossomose.</span>
+                        </span>
+                    </p>
+                    <span class="badge">Python</span>
+                    <span class="badge">OpenCV</span>
+                    <span class="badge">Darknet Framework</span>
+                    <span class="badge">YOLOv4</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <footer>
+            <div class="social-icons">
+                <a href="https://github.com/rutracore" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/artursntrindade/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="http://lattes.cnpq.br/1483108785944130" target="_blank"><i
+                        class="fas fa-graduation-cap"></i></a>
+
+            </div>
+            <p>&copy; Séc. XXI Rutracore</p>
+        </footer>
+    </footer>
+
+
+    <!-- Modal base (replicado) -->
+    <div class="modal" id="anaplasma">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Anaplasma marginale</h3>
+            <img src="Anaplasma.jpg" alt="Anaplasma" />
+            <p>Bactéria intracelular que infecta eritrócitos de bovinos, causando anaplasmose — parte da Tristeza
+                Parasitária.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="bovis">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Babesia bovis</h3>
+            <img src="babesia.jpg" alt="Babesia bovis" />
+            <p>Protozoário hemoparasita transmitido por carrapatos. Causa babesiose severa em bovinos com febre, anemia
+                e pode causar sinais neurológicos como convulsões.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="bigemina">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Babesia bigemina</h3>
+            <img src="babesia1.png" alt="Babesia bigemina" />
+            <p>Outra espécie de Babesia, também causadora de babesiose. Geralmente apresenta quadro clínico semelhante
+                porém menos grave
+                que B. bovis pois não acomete o cérebro do animal.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
